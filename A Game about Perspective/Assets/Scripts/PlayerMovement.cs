@@ -31,13 +31,16 @@ public void Update()
         else
             constrainedControls = false;
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space"))
         {
             GroundCheck();
             if (isGrounded == true)
             {
+                Debug.Log("Jump Allowed");
                 GetComponent<Rigidbody>().AddForce(Vector3.up * jumpVelocity, ForceMode.VelocityChange);
             }
+            else
+                Debug.Log("Jump Disallowed");
         }
 
 
