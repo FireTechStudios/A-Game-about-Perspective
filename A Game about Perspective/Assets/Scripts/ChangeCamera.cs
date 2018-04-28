@@ -1,23 +1,35 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class ChangeCamera : MonoBehaviour
 {
     public GameObject camera2d;
+    public GameObject camera25d;
     public GameObject camera3d;
     public bool isin3d = false;
     public bool canbein3d = true;
     public bool grantFullcontrols = false;
     public float timeleftin3d = 10f;
 
+    public float transitionTimeout = 1.35f;
+    // Private stuff to make the activation timer work
+    private float transitionTimeRemaining;
+    private bool transitionActive = false;
+
+
     //<-- START CAMERA CONTROLS -->//
 
     void Start()
     {
+        transitionTimeRemaining = transitionTimeout;
+        transitionActive = false;
+
         camera2d.SetActive(true);
         camera3d.SetActive(false);
     }
 
-    void Update()
+
+        void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -35,17 +47,31 @@ public class ChangeCamera : MonoBehaviour
                 canbein3d = true;
                 isin3d = false;
             }
+
+            if (!transitionActive && transitionTimeRemaining > 0 && isin3d == true)
+            {
+                // Reduce the remaining time by time passed since last update (frame)
+                transitionTimeRemaining -= Time.deltaTime;
+                camera25d.SetActive(true);
+            }
+            else
+            {
+                // The gun is now disabled and the timer is reset
+                transitionTimeRemaining = transitionTimeout;
+                transitionActive = false;
+                camera25d.SetActive(false);
+            }
+
+            //<-- START PLAYER CONTROLS -->//
+
+            if (isin3d == true)
+            {
+                grantFullcontrols = true;
+            }
+
+            //<-- END PLAYER CONTROLS -->//
+
         }
-
-//<-- START PLAYER CONTROLS -->//
-
-        if (isin3d == true)
-        {
-            grantFullcontrols = true;
-        }
-
-        //<-- END PLAYER CONTROLS -->//
-
     }
 
     void FixedUpdate()
