@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RenderWater : MonoBehaviour {
 
-    public GameObject water;
+    public GameObject water1;
+    public GameObject water2;
     public GameObject cam2d;
     public GameObject cam32d;
 
@@ -15,8 +16,15 @@ public class RenderWater : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if(cam2d.activeSelf == true && cam32d.activeSelf == false)
-            water.SetActive(false);
+        {
+            water1.GetComponent<MeshRenderer>().enabled = false;
+            water2.GetComponent<MeshRenderer>().enabled = false;
+        }
         else
-            water.SetActive(true);
+        {
+            water1.GetComponent<MeshRenderer>().enabled = true;
+            water2.GetComponent<MeshRenderer>().enabled = true;
+        }
+
     }
 }

@@ -45,12 +45,6 @@ public class MenuController : MonoBehaviour {
     [SerializeField]
     public GameObject[] activeBackground;
 
-    //Arrow Animators
-    [SerializeField, HideInInspector]
-    public Animator ArrowR;
-    [SerializeField, HideInInspector]
-    public Animator ArrowL;
-
     //Menu bar gameobject
     [SerializeField, HideInInspector]
     public GameObject menuBar;
@@ -94,25 +88,6 @@ public class MenuController : MonoBehaviour {
         //Changes the text corresponding option
         menuText.text = options[option];
 
-        //Deactivate arrows
-        //If the option is less than 1 left arrow deactivated
-        if(option < 1)
-        {
-            ArrowL.SetBool("Deactivate", true);
-        }else
-        {
-            ArrowL.SetBool("Deactivate", false);
-        }
-
-        //If the option is the last option deactivate right arrow
-        if (option == options.Length-1)
-        {
-            ArrowR.SetBool("Deactivate", true);
-        }
-        else
-        {
-            ArrowR.SetBool("Deactivate", false);
-        }
 
             //If use keys is active move with the keys pressed
             if (useKeys)
@@ -203,9 +178,6 @@ public class MenuController : MonoBehaviour {
         if(option < options.Length-1)
         {
             option = option + 1;
-            ArrowR.SetBool("Click", true);
-            Audio.clip = Select;
-            Audio.Play();
         }
     }
 
@@ -215,9 +187,7 @@ public class MenuController : MonoBehaviour {
         if (option > 0)
         {
             option = option - 1;
-            ArrowL.SetBool("Click", true);
-            Audio.clip = Select;
-            Audio.Play();
+
         }
     }
     
