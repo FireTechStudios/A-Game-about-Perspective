@@ -127,7 +127,7 @@ public class ChangeCamera : MonoBehaviour
         {
             if (isin3d == false)
             {
-                timeleftin3d += Time.deltaTime;
+                timeleftin3d += Time.deltaTime/1.5f;
             }
         }
     }
