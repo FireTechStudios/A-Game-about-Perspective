@@ -12,7 +12,6 @@ public class selectLevel : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        int getLevel = MenuController.selectedLevelInt;
         Button btn = levelButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
     }

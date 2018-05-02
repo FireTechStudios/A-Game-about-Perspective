@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -140,13 +140,13 @@ Material:
     - _FresnelScale: 2.06
     - _GerstnerIntensity: 1.6714286
     - _GlossMapScale: 1
-    - _Glossiness: 0.57
+    - _Glossiness: 0.823
     - _GlossyReflections: 1
     - _HeightDisplacement: 3.2722514
     - _InvFade: 0.628783
     - _InvFadeDepthFade: 0.07197756
     - _InvFadeFoam: 0.1217
-    - _Metallic: 0.558
+    - _Metallic: 1
     - _Mode: 0
     - _NormalsDisplacement: 0
     - _OcclusionStrength: 1
@@ -186,7 +186,7 @@ Material:
     - _Displacement: {r: 6.6371665, g: 20.353983, b: -1, a: -0.681416}
     - _DisplacementXz: {r: 0.6499999, g: -2.9203715, b: 1.6599998, a: -3.9363046}
     - _DistortParams: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0.09245241, g: 0.24505405, b: 0.83823526, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Extinction: {r: 4.5, g: 75, b: 300, a: 1}
     - _Foam: {r: 1.03, g: 2.68, b: 0, a: 0}
     - _FoamWaveParams: {r: 0, g: 0.24918434, b: 3.3395782, a: 1}

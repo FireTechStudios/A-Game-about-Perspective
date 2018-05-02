@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class CollideTrigger : MonoBehaviour
 {
-
-    public GameObject player;
+    public GameObject text;
     public GameObject trigger;
-    public bool hasAlreadyTriggered;
 
-    private void Awake()
+    public void Update()
     {
-        hasAlreadyTriggered = false;
-    }
-
-    void OnTriggerEnter(Collider player)
-    {
-        if (hasAlreadyTriggered == false)
-            trigger.GetComponent<DialogueTrigger>().TriggerDialogue();
-            hasAlreadyTriggered = true;
+        if (text.GetComponent<FadeText>().isShown == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                trigger.GetComponent<DialogueTrigger>().TriggerDialogue();
+            }
+        }
     }
 }
