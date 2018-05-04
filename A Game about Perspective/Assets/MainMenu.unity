@@ -94707,7 +94707,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh90244
+  m_Name: pb_Mesh38334
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -96433,6 +96433,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 224694473462355996, guid: 5749a14fc3167114ea1b1ccf25d3a047,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -96542,6 +96547,31 @@ Prefab:
         type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138393500}
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FullscreenChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 114388038492231820, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+        type: 2}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5749a14fc3167114ea1b1ccf25d3a047, type: 2}
@@ -96858,6 +96888,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 217839ef15e808f4e9fde46b3f0d84e4, type: 3}
   m_IsPrefabParent: 0
+--- !u!114 &1138393500 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114460638906773814, guid: 5749a14fc3167114ea1b1ccf25d3a047,
+    type: 2}
+  m_PrefabInternal: {fileID: 768998111}
+  m_Script: {fileID: 11500000, guid: acb2ea8ffcafd5241a48708d8b56efe6, type: 3}
 --- !u!1001 &1207550893
 Prefab:
   m_ObjectHideFlags: 0
