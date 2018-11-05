@@ -9,11 +9,11 @@ public class ChangeCamera : MonoBehaviour
     public GameObject camera3d;
     public bool isin3d = false;
     public bool canbein3d = true;
-    public bool istransitioningTo3d = false;
-    public bool istransitioningTo2d = false;
+    public static bool isTransitioningTo3d = false;
+    public static bool isTransitioningTo2d = false;
     public bool grantFullcontrols = false;
     public float timeleftin3d = 10f;
-
+    public static bool isTransitioning;
 
     //<-- START CAMERA CONTROLS -->//
 
@@ -28,23 +28,23 @@ public class ChangeCamera : MonoBehaviour
 
         void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && istransitioningTo3d == false && istransitioningTo2d == false)
+        if (Input.GetKeyDown(KeyCode.E) && isTransitioningTo3d == false && isTransitioningTo2d == false)
         {
             if (canbein3d == true && timeleftin3d <= 10 && isin3d == false)
             {
-                istransitioningTo3d = true;
+                isTransitioningTo3d = true;
                 StartCoroutine(TransitionBuffer23());
                 StartCoroutine(Animation23());
             }
             else if (canbein3d == false && timeleftin3d <= 10 && isin3d == true)
             {
-                istransitioningTo2d = true;
+                isTransitioningTo2d = true;
                 StartCoroutine(TransitionBuffer32());
                 StartCoroutine(Animation32());
             }
             else if (canbein3d == true && isin3d == true)
             {
-                istransitioningTo2d = true;
+                isTransitioningTo2d = true;
                 StartCoroutine(TransitionBuffer32());
                 StartCoroutine(Animation32());
             }
@@ -58,19 +58,19 @@ public class ChangeCamera : MonoBehaviour
 
     public IEnumerator TransitionBuffer23()
     {
-        istransitioningTo3d = true;
+        isTransitioningTo3d = true;
         camera3d.SetActive(true);
         camera2d.SetActive(false);
         yield return new WaitForSeconds(1.35f);
         canbein3d = false;
         isin3d = true;
-        istransitioningTo3d = false;
+        isTransitioningTo3d = false;
     }
 
     public IEnumerator TransitionBuffer32()
     {
         grantFullcontrols = false;
-        istransitioningTo2d = true;
+        isTransitioningTo2d = true;
         camera3d.SetActive(false);
         camera2d.SetActive(true);
         isin3d = false;
@@ -78,7 +78,7 @@ public class ChangeCamera : MonoBehaviour
         camera3d.SetActive(false);
         camera2d.SetActive(true);
         canbein3d = true;
-        istransitioningTo2d = false;
+        isTransitioningTo2d = false;
     }
 
     public IEnumerator Animation32()
@@ -127,9 +127,15 @@ public class ChangeCamera : MonoBehaviour
         {
             if (isin3d == false)
             {
-                timeleftin3d += Time.deltaTime/1.5f;
+                timeleftin3d += Time.deltaTime / 1.5f;
             }
         }
+
+        if (isTransitioningTo2d || isTransitioningTo3d)
+            isTransitioning = true;
+        else
+            isTransitioning = false;
+
     }
 
     //<-- END CAMERA CONTROLS -->//

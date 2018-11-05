@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour {
     public GameObject cam3d;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
-    public bool grounded = true;
     [Range(1, 10)]
     public float jumpVelocity;
     public float distToGround;
-    public bool isGrounded;
+    public bool isGrounded = false;
+    public bool isMoving = false;
+    [Range(0, 100)]
+    public float maxSpeed;
 
     public void Start()
     {
@@ -33,7 +35,6 @@ public void Update()
 
         if (Input.GetKeyDown("space"))
         {
-            GroundCheck();
             if (isGrounded == true)
             {
                 GetComponent<Rigidbody>().AddForce(Vector3.up * jumpVelocity, ForceMode.VelocityChange);
@@ -67,6 +68,29 @@ public void Update()
 
     void FixedUpdate ()
 	{
+        GroundCheck();
+        //Check for movement (Xclude jumping)
+        if (constrainedControls == true)
+        {
+            if (Input.GetKey("a") || Input.GetKey("d"))
+            {
+                isMoving = true;
+            }
+            else
+                isMoving = false;
+        }
+        else if (constrainedControls == false)
+        {
+            if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
+            {
+                isMoving = true;
+            }
+            else
+                isMoving = false;
+        }
+
+
+
         if (Input.GetKey("w"))  // If the player is pressing the "d" key
         {
             if (constrainedControls == false)
@@ -102,10 +126,17 @@ public void Update()
             }
 		}
 
+        if(!Input.anyKeyDown && isGrounded == true && isMoving == false)
+        {
+            rb.velocity = new Vector3(rb.velocity.x/1.2f, rb.velocity.y/1.2f, rb.velocity.z/1.2f);
+        }
 
+        if (rb.velocity.sqrMagnitude > maxSpeed)
+        {
+            //smoothness of the slowdown is controlled by the 0.99f, 
+            //0.5f is less smooth, 0.9999f is more smooth
+            rb.velocity *= 0.985f;
+        }
 
-
-
-
-	}
+    }
 }
