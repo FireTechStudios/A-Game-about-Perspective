@@ -10,7 +10,6 @@ public class DeathCollider : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log(this.gameObject.transform.position.x);
         latestCheckpoint = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
     }
 	

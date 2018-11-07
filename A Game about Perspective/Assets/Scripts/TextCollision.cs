@@ -5,20 +5,40 @@ using UnityEngine;
 public class TextCollision : MonoBehaviour {
 
     public GameObject text;
+    public bool isColliding = false;
 
-    void OnTriggerEnter(Collider colidedObj)
+    void OnTriggerEnter(Collider collidedObj)
     {
-        if (colidedObj.tag == "Player")
+        if (collidedObj.tag == "Player")
         {
-            text.GetComponent<FadeText>().StopFade();
+            isColliding = true;
         }
     }
 
-    void OnTriggerExit(Collider colidedObj)
+    void OnTriggerExit(Collider collidedObj)
     {
-        if (colidedObj.tag == "Player")
+        if (collidedObj.tag == "Player")
+        {
+            isColliding = false;
+
+        }
+    }
+
+    void OnDisable()
+    {
+        isColliding = false;
+    }
+
+    void Update()
+    {
+        if(isColliding)
+        {
+            text.GetComponent<FadeText>().StopFade();
+        }
+        else
         {
             text.GetComponent<FadeText>().StartFade();
         }
     }
+
 }

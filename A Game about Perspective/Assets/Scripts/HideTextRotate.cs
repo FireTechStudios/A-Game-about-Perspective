@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HideTextRotate : MonoBehaviour {
 
-    public GameObject parent;
+    public GameObject actionText;
     public GameObject camera3d;
     public GameObject camera2d;
 
@@ -16,8 +16,8 @@ public class HideTextRotate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (camera3d.activeInHierarchy == true)
-            parent.transform.LookAt(camera3d.transform);
+            actionText.transform.rotation = Quaternion.LookRotation(this.transform.position - camera3d.transform.position);
         else
-            parent.transform.LookAt(camera2d.transform);
+            actionText.transform.rotation = Quaternion.LookRotation(this.transform.position - camera2d.transform.position);
     }
 }

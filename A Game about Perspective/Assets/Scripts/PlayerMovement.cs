@@ -25,6 +25,15 @@ public class PlayerMovement : MonoBehaviour {
 
 public void Update()
     {
+        //Rigidbody constraints
+        if(constrainedControls)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation;
+        }
 
         if (cam3d.activeInHierarchy == false)
         {

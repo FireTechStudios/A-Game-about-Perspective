@@ -60,7 +60,7 @@ public class MenuController : MonoBehaviour {
     [SerializeField]
     public GameObject OptionsMenu;
 
-
+    public bool isMenuOpen = false;
 
     void Start()
     {
@@ -75,7 +75,6 @@ public class MenuController : MonoBehaviour {
         //Changes the text corresponding option
         menuText.text = options[option];
         }
-
     }
 
     //Press enter or click on option 
@@ -87,7 +86,7 @@ public class MenuController : MonoBehaviour {
     //Function to go foward in the menu
     public void moveRight()
     {
-        if(option < options.Length-1)
+        if(option < options.Length-1 && !isMenuOpen)
         {
             option = option + 1;
         }
@@ -96,7 +95,7 @@ public class MenuController : MonoBehaviour {
     //Function to go back in the menu
     public void moveLeft()
     {
-        if (option > 0)
+        if (option > 0 && !isMenuOpen)
         {
             option = option - 1;
 
@@ -113,6 +112,7 @@ public class MenuController : MonoBehaviour {
     //Opens the exit menu
     public void exitMenuOpen()
     {
+        isMenuOpen = true;
         var animEx = exitMenu.GetComponent<Animation>();
         exitMenu.transform.SetAsLastSibling();
         animEx.Play("Fade In");
@@ -122,6 +122,7 @@ public class MenuController : MonoBehaviour {
     //Closes the exit menu
     public void exitMenuClose()
     {
+        isMenuOpen = false;
         var animEx = exitMenu.GetComponent<Animation>();
         animEx.Play("Fade out");
         mainMenu = true;
@@ -130,6 +131,7 @@ public class MenuController : MonoBehaviour {
     //Opens the select menu
     public void levelSelectOpen()
     {
+        isMenuOpen = true;
         var animEx = levelSelect.GetComponent<Animation>();
         exitMenu.transform.SetAsLastSibling();
         animEx.Play("Fade In");
@@ -139,6 +141,7 @@ public class MenuController : MonoBehaviour {
     //Closes the select menu
     public void levelSelectClose()
     {
+        isMenuOpen = false;
         var animEx = levelSelect.GetComponent<Animation>();
         animEx.Play("Fade out");
         mainMenu = true;
@@ -160,6 +163,7 @@ public class MenuController : MonoBehaviour {
     //Open Options
     public void openOptions()
     {
+        isMenuOpen = true;
         OptionsMenu.gameObject.GetComponent<Animation>().Play("Fade In");
         mainMenu = false;
         OptionsMenu.transform.SetAsLastSibling();
@@ -168,6 +172,7 @@ public class MenuController : MonoBehaviour {
     //Close Options
     public void closeOptions()
     {
+        isMenuOpen = false;
         OptionsMenu.gameObject.GetComponent<Animation>().Play("Fade out");
         mainMenu = true;
     }
