@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallax Error", "Assembly-CSharp.csproj", "{804EA1E8-D625-9F91-6486-A987AAD6662A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{804EA1E8-D625-9F91-6486-A987AAD6662A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallax Error", "Assembly-CSharp-firstpass.csproj", "{25ED06D9-E6E7-66FD-29AA-7CDF98DF0BB8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{25ED06D9-E6E7-66FD-29AA-7CDF98DF0BB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallax Error", "Assembly-CSharp-Editor.csproj", "{F7AA115F-AE29-1583-46D9-A82D40D77FB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{F7AA115F-AE29-1583-46D9-A82D40D77FB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parallax Error", "Assembly-CSharp-Editor-firstpass.csproj", "{1536D9E7-E222-E3D3-B3B2-D897DADC99AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{1536D9E7-E222-E3D3-B3B2-D897DADC99AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

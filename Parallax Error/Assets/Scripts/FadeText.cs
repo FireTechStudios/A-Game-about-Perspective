@@ -38,7 +38,7 @@ public class FadeText : MonoBehaviour {
 
         if (isShown == true)
         {
-            alpha += Time.deltaTime * 1;
+            alpha += Time.deltaTime * 0.5f;
         }
         else
         {

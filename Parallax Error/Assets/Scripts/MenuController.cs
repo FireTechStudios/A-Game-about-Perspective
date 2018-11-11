@@ -60,6 +60,10 @@ public class MenuController : MonoBehaviour {
     [SerializeField]
     public GameObject OptionsMenu;
 
+    //Title
+    public GameObject title;
+    public TransitionManager TransScript;
+
     public bool isMenuOpen = false;
 
     void Start()
@@ -108,7 +112,8 @@ public class MenuController : MonoBehaviour {
     public void newGame()
     {
         //Loads the first scene, change the number to your desired scene
-        SceneManager.LoadScene(1);
+        var selectedLevel = "Level1";
+        TransitionManager.TransitionToLevel(selectedLevel, menuBar, title, TransScript);
     }
 
     //Opens the exit menu
@@ -153,7 +158,8 @@ public class MenuController : MonoBehaviour {
     public void levelSelectGo()
     {
         string selectedLevel = "Level" + selectedLevelInt;
-        SceneManager.LoadScene(selectedLevel);
+        levelSelectClose();
+        TransitionManager.TransitionToLevel(selectedLevel, menuBar, title, TransScript);
     }
 
     //Exit Game

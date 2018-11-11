@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         player = this.gameObject;
         Cursor.visible = false;
+        rb.useGravity = true;
     }
 
 public void Update()
