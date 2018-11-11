@@ -15,8 +15,8 @@ public class MenuController : MonoBehaviour {
     private bool mainMenu = true;
 
     //Scenes animation
-    private bool isAnimating = false;
-    private int activeScene = 1;
+    //private bool isAnimating = false;
+    //private int activeScene = 1;
     [SerializeField, Tooltip("Animation speed in seconds")]
     public float animSpeed;
 
@@ -64,6 +64,7 @@ public class MenuController : MonoBehaviour {
 
     void Start()
     {
+        Cursor.visible = true;
         Audio = gameObject.GetComponent<AudioSource>();
         instance = this;
 
@@ -177,6 +178,7 @@ public class MenuController : MonoBehaviour {
         OptionsMenu.gameObject.GetComponent<Animation>().Play("Fade out");
         mainMenu = true;
     }
+
 
 }
 

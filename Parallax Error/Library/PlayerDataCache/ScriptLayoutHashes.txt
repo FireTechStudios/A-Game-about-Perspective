@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/Documents/Parallax-Error/Builds/Windows/Parallax Error/Parallax Error.exe
+D:/Documents/Game Builds/Windows/Parallax Error/Parallax Error.exe
 SceneListBegin?
 Assets/MainMenu.unity
 Assets/Level1.unity
@@ -25,6 +25,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.AICharacterControl
 7c4009185d1e3bcf3491adeea097f83e Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.FirstPersonController
+07ac51232a8735f7d0574453724d230c Assembly-CSharp.dll:.ForceTeleport
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.EventSystemChecker
 25a8032d233df72c368030798802d97d Assembly-CSharp.dll:.ExtrudeRandomEdges
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -139,7 +140,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.TMP_PhoneNumberValidator
 318490c6189b241f4ede8865144f47b9 Assembly-CSharp.dll:.Switchers2D3D
 3cec46facae45921257202a20c50db64 Assembly-CSharp.dll:TMPro.Examples.WarpTextExample
-0f4f21e336028ce94bdfd49fc0c4f69c Assembly-CSharp.dll:.MouseOrbitImproved
+3468dcdc03e1f42448b4d2e4ff1ff4bf Assembly-CSharp.dll:.MouseOrbitImproved
 f4bd1aee67eeef7953cce6c44588b3d7 TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextContainer
 8e879b98cad4aa17a0beef746daecd35 TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextMeshPro
 cdb4459900f4743ae0e8ca5a2c3a821a TextMeshPro-2017.3-1.0.56-Runtime.dll:TMPro.TextMeshProUGUI
@@ -263,7 +264,7 @@ f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTool
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.AlphaButtonClickMask
 06b898f54eee9201329e6d350db89578 Assembly-CSharp.dll:.CheckGrounded
-e330ff42dcd4ed89472000c7cb5902fb Assembly-CSharp.dll:.ChangeCamera
+7615bcdad3d84e1a3e386e137ee52acc Assembly-CSharp.dll:.ChangeCamera
 9e0ef5bf862444b5dc48b5a99554ce7c UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
@@ -291,7 +292,7 @@ a764ed39791e886a53f13cfce418447e Assembly-CSharp.dll:UnityEngine.PostProcessing.
 0e6d42bd96f7412df791f4a39dc9a07f Assembly-CSharp.dll:.ParallaxTeleport2D
 48a9dee325686d1924a2646b71c83f08 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-beb09a6ef1a170da57f47f8a74d64af4 Assembly-CSharp.dll:.CameraCollision
+87a95e6d4da292eef8fc614f0bb15545 Assembly-CSharp.dll:.CameraCollision
 db3b233e35a88802fed1717d19c3d9ec Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FollowTarget
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
 a8796ecdc9d5c260bbe32f30c4b10708 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad

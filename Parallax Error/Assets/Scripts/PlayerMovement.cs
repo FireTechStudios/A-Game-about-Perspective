@@ -28,13 +28,17 @@ public class PlayerMovement : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         player = this.gameObject;
+        Cursor.visible = false;
     }
 
 public void Update()
     {
-
         //Rigidbody constraints
-        if (constrainedControls)
+        if (ChangeCamera.isTransitioning)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
+        }
+        else if (constrainedControls)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         }

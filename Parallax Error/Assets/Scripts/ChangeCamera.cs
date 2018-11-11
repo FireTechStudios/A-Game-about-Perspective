@@ -13,6 +13,7 @@ public class ChangeCamera : MonoBehaviour
     public static bool isTransitioningTo2d = false;
     public bool grantFullcontrols = false;
     public float timeleftin3d = 10f;
+    public float timeAllowedIn3D;
     public static bool isTransitioning;
 
     //<-- START CAMERA CONTROLS -->//
@@ -28,15 +29,16 @@ public class ChangeCamera : MonoBehaviour
 
         void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.E) && isTransitioningTo3d == false && isTransitioningTo2d == false)
         {
-            if (canbein3d == true && timeleftin3d <= 10 && isin3d == false)
+            if (canbein3d == true && timeleftin3d <= timeAllowedIn3D && isin3d == false)
             {
                 isTransitioningTo3d = true;
                 StartCoroutine(TransitionBuffer23());
                 StartCoroutine(Animation23());
             }
-            else if (canbein3d == false && timeleftin3d <= 10 && isin3d == true)
+            else if (canbein3d == false && timeleftin3d <= timeAllowedIn3D && isin3d == true)
             {
                 isTransitioningTo2d = true;
                 StartCoroutine(TransitionBuffer32());
@@ -103,10 +105,10 @@ public class ChangeCamera : MonoBehaviour
         }
 
 
-        if (timeleftin3d >= 10)
+        if (timeleftin3d >= timeAllowedIn3D)
         {
             canbein3d = true;
-            timeleftin3d = 10;
+            timeleftin3d = timeAllowedIn3D;
         }
 
         if (timeleftin3d > 0 )
@@ -123,7 +125,7 @@ public class ChangeCamera : MonoBehaviour
             StartCoroutine(Animation32());
         }
 
-        if (timeleftin3d < 10)
+        if (timeleftin3d < timeAllowedIn3D)
         {
             if (isin3d == false)
             {

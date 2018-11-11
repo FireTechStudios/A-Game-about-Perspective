@@ -96,7 +96,6 @@ public class DialogueManager : MonoBehaviour {
     {
         if(Input.GetKeyDown(KeyCode.Return) && currentlyScrolling)
         {
-            Debug.Log("Skip");
             StopAllCoroutines();
             currentlyScrolling = false;
             dialogueText.text = PreviousSentence;

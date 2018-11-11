@@ -64,6 +64,7 @@
     <Compile Include="Assets\Assets\Dialogue Prefabs\Dialogue.cs" />
     <Compile Include="Assets\Assets\Dialogue Prefabs\DialogueManager.cs" />
     <Compile Include="Assets\Assets\Dialogue Prefabs\DialogueTrigger.cs" />
+    <Compile Include="Assets\ForceTeleport.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />

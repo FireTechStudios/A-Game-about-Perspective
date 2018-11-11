@@ -37,8 +37,9 @@ public class SettingsController : MonoBehaviour {
 
     public void FullscreenToggle()
     {
-        gameSettings.fullscreen = Screen.fullScreen = fullscreenToggle.isOn;
-        Screen.SetResolution(resolutions[resolutionDrop.value].width, resolutions[resolutionDrop.value].height, Screen.fullScreen, resolutions[resolutionDrop.value].refreshRate);
+        gameSettings.fullscreen = fullscreenToggle.isOn;
+        Screen.fullScreen = fullscreenToggle.isOn;
+        Screen.SetResolution(resolutions[resolutionDrop.value].width, resolutions[resolutionDrop.value].height, fullscreenToggle.isOn, resolutions[resolutionDrop.value].refreshRate);
         gameSettings.resolutionIndex = resolutionDrop.value;
     }
 
@@ -85,5 +86,11 @@ public class SettingsController : MonoBehaviour {
         textQualityDrop.value = gameSettings.textureQuality;
         volume.value = gameSettings.volume;
         resolutionDrop.RefreshShownValue();
+    }
+
+    private void Start()
+    {
+        Screen.SetResolution(resolutions[resolutionDrop.value].width, resolutions[resolutionDrop.value].height, fullscreenToggle.isOn, resolutions[resolutionDrop.value].refreshRate);
+        gameSettings.resolutionIndex = resolutionDrop.value;
     }
 }
