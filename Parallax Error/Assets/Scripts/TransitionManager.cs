@@ -8,6 +8,7 @@ public class TransitionManager : MonoBehaviour {
     public string levelToTransition;
     public GameObject Level1;
     public GameObject RiseGround;
+    public GameObject Timer;
     public bool reloadScene = false;
 
     // Use this for initialization
@@ -19,6 +20,7 @@ public class TransitionManager : MonoBehaviour {
     void Update() {
         Level1 = GameObject.Find("Level1");
         RiseGround = GameObject.Find("RiseGround");
+        Timer = GameObject.Find("Timer");
     }
 
     public static void TransitionToLevel(string level, GameObject NavMenu, GameObject Title, TransitionManager TransScript)
@@ -55,7 +57,7 @@ public class TransitionManager : MonoBehaviour {
         SceneManager.LoadScene("Transition");
         StartCoroutine(MoveObjects(levelToTransition)); 
     }
-
+    //In transition scene
 
     public IEnumerator MoveObjects(string level)
     {
@@ -68,7 +70,12 @@ public class TransitionManager : MonoBehaviour {
         else
         {
             //ADD OTHER ANIMATION LEVEL TRANSITONS HERE
-            Debug.Log("NotLevel1");
+            Debug.Log("UnimplementedLevel");
+        }
+        if(level != "MainMenu")
+        {
+            var animTimer = Timer.GetComponent<Animation>();
+            animTimer.Play("TimerFadeIn");
         }
 
         if(reloadScene)

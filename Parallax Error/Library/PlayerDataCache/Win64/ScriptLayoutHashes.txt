@@ -2,6 +2,7 @@ WindowsStandalone
 PlayerPath?
 D:/Documents/Game Builds/Parallax Error/A Fresh Perspective.exe
 SceneListBegin?
+Assets/StartIntro.unity
 Assets/MainMenu.unity
 Assets/Transition.unity
 Assets/Level1.unity
@@ -171,7 +172,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 d17b1f1790ce13ac5f0fa6c48f4d0684 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
-307c72f08f89f1dfe7ddc1ab20df3adf Assembly-CSharp.dll:.PauseManager
+f56fef483f7e6a38436efc1ab3ef2a4b Assembly-CSharp.dll:.PauseManager
 4ea8d9566bdcd2e6d7cf97aef45ed480 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 4bd2ce0ce7ea9374f663549b0ba0aa06 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter
 1b8e83c83f5da5a5e888031b95784214 Assembly-CSharp.dll:TMPro.Examples.Benchmark03
@@ -259,6 +260,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 6cb8e166eb7b5eba6567fb6b107b6d77 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointCircuit
 fd5bec7c3a0fba860bb3b16a37b8f7c4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.TransitionToMainMenuFromIntro
 bb3f8ae71cc0b231bf331b52aca45ebd Assembly-CSharp.dll:TMPro.Examples.CameraController
 486cd95c82d8305219c352c06b776e1f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -307,7 +309,7 @@ ff255c0d4e3fafab5c7a6730585e446c Assembly-CSharp.dll:.DialogueTrigger
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 1b8e83c83f5da5a5e888031b95784214 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
 1b19a590a02b791cf7c287970cfab801 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
-213e42862481def4796579d311e93b96 Assembly-CSharp.dll:.TransitionManager
+3a5d9d44d870796a8fa594d28b7337e1 Assembly-CSharp.dll:.TransitionManager
 baae52a2e1a12eafa04414d90fac8909 Assembly-CSharp.dll:.RenderWater
 c0230079978996b923b325c90d4b672a Assembly-CSharp.dll:ProBuilder2.Examples.RuntimeEdit
 e1c72db36019292c5bfd442560f68a1d Assembly-CSharp.dll:.SliderTimer
