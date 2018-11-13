@@ -34,11 +34,16 @@ public class MouseOrbitImproved : MonoBehaviour
 
         if (cam3d.activeInHierarchy)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+            
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            transform.rotation = rotation;
+            if (!PauseManager.IsPaused)
+            {
+                x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+                transform.rotation = rotation;
+            }
+
         }
         else
         {

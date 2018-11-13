@@ -1,8 +1,8 @@
 OSXStandalone
 PlayerPath?
-D:/Documents/Game Builds/Parallax Error Mac.app
+D:/Documents/Game Builds/Parallax Error.app
 SceneListBegin?
-Assets/StartIntro.unity
+Assets/Intro.unity
 Assets/MainMenu.unity
 Assets/Transition.unity
 Assets/Level1.unity
@@ -172,7 +172,7 @@ dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.DragRigidbody
 d17b1f1790ce13ac5f0fa6c48f4d0684 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 fa1c317e7807ba3c9b05056693f277ff Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.Joystick
-f56fef483f7e6a38436efc1ab3ef2a4b Assembly-CSharp.dll:.PauseManager
+b903c186756a82d084364e53edd3c4d3 Assembly-CSharp.dll:.PauseManager
 4ea8d9566bdcd2e6d7cf97aef45ed480 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.PlatformSpecificContent
 4bd2ce0ce7ea9374f663549b0ba0aa06 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter
 1b8e83c83f5da5a5e888031b95784214 Assembly-CSharp.dll:TMPro.Examples.Benchmark03

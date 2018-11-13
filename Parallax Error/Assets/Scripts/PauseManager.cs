@@ -19,8 +19,8 @@ public class PauseManager : MonoBehaviour {
     public Animator PauseAnimator;
     public Animator Timer3DAnimator;
 
-    public bool IsPaused;
-    public bool Transitioning;
+    public static bool IsPaused;
+    public static bool Transitioning;
 
     public Button Reload;
     public Button Menu;
@@ -50,20 +50,17 @@ public class PauseManager : MonoBehaviour {
             if (IsPaused == true)
             {
                 OverlayAnimator.SetBool("IsPaused", true);
-                PauseAnimator.SetBool("IsPaused", true);
                 Pause();
             }
             else
             {
                 OverlayAnimator.SetBool("IsPaused", false);
-                PauseAnimator.SetBool("IsPaused", false);
                 Unpause();
             }
         }
         if (IsPaused == false)
         {
             OverlayAnimator.SetBool("IsPaused", false);
-            PauseAnimator.SetBool("IsPaused", false);
             Unpause();
         }
 	}

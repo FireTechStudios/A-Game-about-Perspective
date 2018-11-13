@@ -30,7 +30,7 @@ public class ChangeCamera : MonoBehaviour
         void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && isTransitioningTo3d == false && isTransitioningTo2d == false)
+        if (Input.GetKeyDown(KeyCode.E) && !isTransitioningTo3d && !isTransitioningTo2d && !PauseManager.Transitioning)
         {
             if (canbein3d == true && timeleftin3d <= timeAllowedIn3D && isin3d == false)
             {

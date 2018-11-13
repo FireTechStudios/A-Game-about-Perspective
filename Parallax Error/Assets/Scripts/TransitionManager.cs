@@ -19,7 +19,6 @@ public class TransitionManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         Level1 = GameObject.Find("Level1");
-        RiseGround = GameObject.Find("RiseGround");
         Timer = GameObject.Find("Timer");
     }
 
@@ -55,6 +54,20 @@ public class TransitionManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.333f);
         SceneManager.LoadScene("Transition");
+        yield return new WaitForSeconds(0.001f);
+        if (reloadScene)
+        {
+            RiseGround = GameObject.Find("RiseGround");
+            RiseGround.transform.position = new Vector3(-9.5f, -9f, -115.25f);
+            var animRiseGround = RiseGround.GetComponent<Animation>();
+            animRiseGround.Play("GroundRise");
+            reloadScene = false;
+        }
+        else
+        {
+            RiseGround = GameObject.Find("RiseGround");
+            RiseGround.transform.position = new Vector3(-9.5f, -4.5f, -115.25f);
+        }
         StartCoroutine(MoveObjects(levelToTransition)); 
     }
     //In transition scene
@@ -76,18 +89,6 @@ public class TransitionManager : MonoBehaviour {
         {
             var animTimer = Timer.GetComponent<Animation>();
             animTimer.Play("TimerFadeIn");
-        }
-
-        if(reloadScene)
-        {
-            RiseGround.transform.position = new Vector3(-9.5f, -9f, -115.25f);
-            var animRiseGround = RiseGround.GetComponent<Animation>();
-            animRiseGround.Play("GroundRise");
-            reloadScene = false;
-        }
-        else
-        {
-            RiseGround.transform.position = new Vector3(-9.5f, -4.5f, -115.25f);
         }
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(level);
