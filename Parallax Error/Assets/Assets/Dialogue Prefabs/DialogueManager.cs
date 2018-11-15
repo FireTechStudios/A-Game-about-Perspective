@@ -20,6 +20,8 @@ public class DialogueManager : MonoBehaviour {
 
     public bool canEnd = false;
 
+    public static bool isInDialogue;
+
     // Use this for initialization
     void Start () {
 		sentences = new Queue<string>();
@@ -29,7 +31,9 @@ public class DialogueManager : MonoBehaviour {
 
 	public void StartDialogue (Dialogue dialogue)
 	{
-		animator.SetBool("IsOpen", true);
+        isInDialogue = true;
+
+        animator.SetBool("IsOpen", true);
 
 		nameText.text = dialogue.name;
 
@@ -89,7 +93,9 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue()
 	{
-		animator.SetBool("IsOpen", false);
+        isInDialogue = false;
+
+        animator.SetBool("IsOpen", false);
 	}
 
     public void Skip(string sentence)

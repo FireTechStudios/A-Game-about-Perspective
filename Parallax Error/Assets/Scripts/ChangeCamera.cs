@@ -30,7 +30,7 @@ public class ChangeCamera : MonoBehaviour
         void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && !isTransitioningTo3d && !isTransitioningTo2d && !PauseManager.Transitioning)
+        if (Input.GetKeyDown(KeyCode.E) && !isTransitioningTo3d && !isTransitioningTo2d && !PauseManager.Transitioning && !DialogueManager.isInDialogue)
         {
             if (canbein3d == true && timeleftin3d <= timeAllowedIn3D && isin3d == false)
             {
@@ -99,7 +99,7 @@ public class ChangeCamera : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (isin3d == true)
+        if (isin3d == true && !DialogueManager.isInDialogue && !isTransitioning)
         {
             timeleftin3d -= Time.deltaTime;
         }
@@ -127,7 +127,7 @@ public class ChangeCamera : MonoBehaviour
 
         if (timeleftin3d < timeAllowedIn3D)
         {
-            if (isin3d == false)
+            if (isin3d == false && !DialogueManager.isInDialogue && !isTransitioning)
             {
                 timeleftin3d += Time.deltaTime;
             }

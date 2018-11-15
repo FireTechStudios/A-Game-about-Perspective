@@ -1,6 +1,6 @@
 OSXStandalone
 PlayerPath?
-D:/Documents/Game Builds/Parallax Error.app
+/Users/AlexanderLaidlaw/Downloads/Parallax-Error-master/Parallax Error.app
 SceneListBegin?
 Assets/Intro.unity
 Assets/MainMenu.unity
@@ -300,6 +300,7 @@ ebc31dc7976aeffcc84e23b049016bd0 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
 2d5613dfea5ebe89d441816537142920 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.TouchPad
 76d2df27be185e27e116e08df79b3271 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Vehicles.Ball.Ball
+96359de30427706d62897f43d6f39f90 Assembly-CSharp.dll:.GoalReached
 5b83580a22df4ed5e756000935aa4092 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.TimedObjectDestructor
 7e7ee21ab8ff1f2eb206565d6caa2bfd Assembly-CSharp.dll:TMPro.Examples.VertexShakeB
 ff938a317dcdabb92126711d5e33fcf8 Assembly-CSharp.dll:.DisplayNextSentence
@@ -310,7 +311,6 @@ ff255c0d4e3fafab5c7a6730585e446c Assembly-CSharp.dll:.DialogueTrigger
 1b8e83c83f5da5a5e888031b95784214 Assembly-CSharp.dll:TMPro.Examples.TextMeshSpawner
 1b19a590a02b791cf7c287970cfab801 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 3a5d9d44d870796a8fa594d28b7337e1 Assembly-CSharp.dll:.TransitionManager
-baae52a2e1a12eafa04414d90fac8909 Assembly-CSharp.dll:.RenderWater
 c0230079978996b923b325c90d4b672a Assembly-CSharp.dll:ProBuilder2.Examples.RuntimeEdit
 e1c72db36019292c5bfd442560f68a1d Assembly-CSharp.dll:.SliderTimer
 da171e3faabd4c01117615c52f5c0520 Assembly-CSharp.dll:.SettingsController

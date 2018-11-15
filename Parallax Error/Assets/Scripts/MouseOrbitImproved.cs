@@ -40,8 +40,11 @@ public class MouseOrbitImproved : MonoBehaviour
 
             if (!PauseManager.IsPaused)
             {
-                x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
-                transform.rotation = rotation;
+                if(!DialogueManager.isInDialogue)
+                {
+                    x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+                    transform.rotation = rotation;
+                }
             }
 
         }

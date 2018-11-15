@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour {
 public void Update()
     {
         //Rigidbody constraints
-        if (ChangeCamera.isTransitioning)
+        if (ChangeCamera.isTransitioning || DialogueManager.isInDialogue)
         {
             rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
         }
