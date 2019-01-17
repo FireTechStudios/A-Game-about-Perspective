@@ -58,7 +58,7 @@ public class TransitionManager : MonoBehaviour {
         if (reloadScene)
         {
             RiseGround = GameObject.Find("RiseGround");
-            RiseGround.transform.position = new Vector3(-9.5f, -9f, -115.25f);
+            RiseGround.transform.position = new Vector3(76.3f, 50f, 0.75f);
             var animRiseGround = RiseGround.GetComponent<Animation>();
             animRiseGround.Play("GroundRise");
             reloadScene = false;
@@ -66,7 +66,7 @@ public class TransitionManager : MonoBehaviour {
         else
         {
             RiseGround = GameObject.Find("RiseGround");
-            RiseGround.transform.position = new Vector3(-9.5f, -4.5f, -115.25f);
+            RiseGround.transform.position = new Vector3(76.3f, 55f, 0.75f);
         }
         StartCoroutine(MoveObjects(levelToTransition)); 
     }

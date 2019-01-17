@@ -81,6 +81,7 @@ public class PauseManager : MonoBehaviour {
 
     public void ReloadScene()
     {
+        player.GetComponent<BoxCollider>().isTrigger = true;
         Timer3DAnimator.SetBool("ExitToMenu", true);
         Transitioning = true;
         IsPaused = false;
