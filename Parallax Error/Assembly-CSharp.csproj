@@ -64,7 +64,6 @@
     <Compile Include="Assets\Assets\Dialogue Prefabs\Dialogue.cs" />
     <Compile Include="Assets\Assets\Dialogue Prefabs\DialogueManager.cs" />
     <Compile Include="Assets\Assets\Dialogue Prefabs\DialogueTrigger.cs" />
-    <Compile Include="Assets\GoalReached.cs" />
     <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -135,6 +134,7 @@
     <Compile Include="Assets\Scripts\FadeText.cs" />
     <Compile Include="Assets\Scripts\ForceTeleport.cs" />
     <Compile Include="Assets\Scripts\GhostObject3D.cs" />
+    <Compile Include="Assets\Scripts\GoalReached.cs" />
     <Compile Include="Assets\Scripts\HideTextRotate.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MouseOrbitImproved.cs" />

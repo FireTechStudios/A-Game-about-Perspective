@@ -1,12 +1,12 @@
 OSXStandalone
 PlayerPath?
-/Users/AlexanderLaidlaw/Downloads/Parallax-Error-master/Parallax Error.app
+/Users/AlexanderLaidlaw/Desktop/ParallaxError.app
 SceneListBegin?
-Assets/Intro.unity
-Assets/MainMenu.unity
-Assets/Transition.unity
-Assets/Level1.unity
-Assets/Level2.unity
+Assets/Scenes/Intro.unity
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/Transition.unity
+Assets/Scenes/Level1.unity
+Assets/Scenes/Level2.unity
 SceneListEnd?
 4206c110c99e43920bbd36a379dec799 ProBuilderCore-Unity5.dll:ProBuilder2.Common.pb_PreferenceDictionary
 7e7ee21ab8ff1f2eb206565d6caa2bfd Assembly-CSharp.dll:TMPro.Examples.VertexZoom

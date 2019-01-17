@@ -7,6 +7,14 @@ public class TextCollision : MonoBehaviour {
     public GameObject text;
     public bool isColliding = false;
 
+    void OnTriggerStay(Collider collidedObj)
+    {
+        if (collidedObj.tag == "Player")
+        {
+            isColliding = true;
+        }
+    }
+
     void OnTriggerEnter(Collider collidedObj)
     {
         if (collidedObj.tag == "Player")

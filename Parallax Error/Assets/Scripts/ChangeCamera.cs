@@ -71,10 +71,12 @@ public class ChangeCamera : MonoBehaviour
 
     public IEnumerator TransitionBuffer32()
     {
+
+
         grantFullcontrols = false;
         isTransitioningTo2d = true;
         camera3d.SetActive(false);
-        camera2d.SetActive(true);
+        camera2d.SetActive(false);
         isin3d = false;
         yield return new WaitForSeconds(1.35f);
         camera3d.SetActive(false);
