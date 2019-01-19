@@ -30,8 +30,6 @@ public class MouseOrbitImproved : MonoBehaviour
 
     void LateUpdate()
     {
-
-
         if (cam3d.activeInHierarchy)
         {
             

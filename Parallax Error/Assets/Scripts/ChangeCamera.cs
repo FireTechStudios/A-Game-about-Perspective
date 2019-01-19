@@ -11,6 +11,7 @@ public class ChangeCamera : MonoBehaviour
     public bool canbein3d = true;
     public static bool isTransitioningTo3d = false;
     public static bool isTransitioningTo2d = false;
+    public static bool isIn3D;
     public bool grantFullcontrols = false;
     public float timeleftin3d = 10f;
     public float timeAllowedIn3D;
@@ -28,8 +29,8 @@ public class ChangeCamera : MonoBehaviour
 
 
         void Update()
-    {
-
+        {
+        isIn3D = isin3d;
         if (Input.GetKeyDown(KeyCode.E) && !isTransitioningTo3d && !isTransitioningTo2d && !PauseManager.Transitioning && !DialogueManager.isInDialogue)
         {
             if (canbein3d == true && timeleftin3d <= timeAllowedIn3D && isin3d == false)
@@ -131,7 +132,7 @@ public class ChangeCamera : MonoBehaviour
         {
             if (isin3d == false && !DialogueManager.isInDialogue && !isTransitioning)
             {
-                timeleftin3d += Time.deltaTime;
+                timeleftin3d += Time.deltaTime * 5f;
             }
         }
 
