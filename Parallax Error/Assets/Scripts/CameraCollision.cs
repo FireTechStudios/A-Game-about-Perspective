@@ -42,8 +42,13 @@ public class CameraCollision : MonoBehaviour {
 
             transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
         }
+        else
+        {
+            distance = maxDistance;
+            transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
+        }
 
-	}
+    }
 
     private void OnEnable()
     {

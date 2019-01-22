@@ -68,6 +68,7 @@ public class MenuController : MonoBehaviour {
 
     void Start()
     {
+        TransScript = FindObjectOfType<TransitionManager>();
         Cursor.visible = true;
         Audio = gameObject.GetComponent<AudioSource>();
         instance = this;

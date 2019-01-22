@@ -53,7 +53,7 @@ public class GoalReached : MonoBehaviour {
             }
             else
             {
-                Time.timeScale -= Time.unscaledDeltaTime;
+                Time.timeScale -= 0.5f * Time.unscaledDeltaTime;
             }
         }
     }
@@ -65,7 +65,7 @@ public class GoalReached : MonoBehaviour {
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }

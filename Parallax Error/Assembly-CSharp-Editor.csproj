@@ -152,6 +152,16 @@
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ParameterWindow.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_Preferences.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Editor\pg_ToggleContent.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapCalculator.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapCalculatorProgress.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapDirtyCheck.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapEditor.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapPresetEditor.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\ColormapValue.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\FileUtils.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\Palette Extractor\ColorBucket.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\Palette Extractor\PaletteExtractor.cs" />
+    <Compile Include="Assets\Retro Pixel Pro\Scripts\Editor\RetroPixelProEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Documents/Parallax-Error/Parallax Error/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
