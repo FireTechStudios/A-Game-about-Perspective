@@ -34,12 +34,6 @@ public class MenuController : MonoBehaviour {
     [SerializeField]
     public GameObject menuBar;
 
-    //Sounds
-    [Header("Sounds")]
-    [Space(10)]
-    public AudioClip Select;
-    public AudioClip SceneSelect;
-    private AudioSource Audio;
 
     //Events
     [SerializeField]
@@ -70,7 +64,6 @@ public class MenuController : MonoBehaviour {
     {
         TransScript = FindObjectOfType<TransitionManager>();
         Cursor.visible = true;
-        Audio = gameObject.GetComponent<AudioSource>();
         instance = this;
 
     }

@@ -1,5 +1,13 @@
 ﻿<Properties StartupConfiguration="{804EA1E8-D625-9F91-6486-A987AAD6662A}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MouseOrbitImproved.cs">
+    <Files>
+      <File FileName="Assets/Scripts/SettingsController.cs" Line="69" Column="42" />
+      <File FileName="Assets/MusicManager.cs" Line="36" Column="3" />
+      <File FileName="Assets/Scripts/HideTextRotate.cs" Line="16" Column="36" />
+      <File FileName="Assets/Scripts/FadeText.cs" Line="59" Column="26" />
+      <File FileName="Assets/Scripts/MouseOrbitImproved.cs" Line="33" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />

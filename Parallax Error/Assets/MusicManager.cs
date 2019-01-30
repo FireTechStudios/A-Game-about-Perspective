@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class MusicManager : MonoBehaviour {
 
+    public Settings gameSettings;
+    public AudioListener listener;
     public AudioSource retro;
     public AudioSource orchestral;
     public float changeValue = 0.75f;
@@ -31,7 +34,5 @@ public class MusicManager : MonoBehaviour {
             orchestral.volume += changeValue * Time.deltaTime;
         }
 	}
-
-
 
 }
