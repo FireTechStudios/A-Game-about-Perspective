@@ -38,11 +38,26 @@ public class FadeText : MonoBehaviour {
 
         if (isShown == true)
         {
-            alpha += Time.deltaTime * 0.5f;
+            if (ChangeCamera.isIn3D)
+            {
+                alpha += Time.deltaTime * 0.5f;
+            }
+            else
+            {
+                alpha = 1.0f;
+            }
+
         }
         else
         {
-            alpha -= Time.deltaTime * 1.5f;
+            if (ChangeCamera.isIn3D)
+            {
+                alpha -= Time.deltaTime * 1.5f;
+            }
+            else
+            {
+                alpha = 0.0f;
+            }
         }
     }
 
